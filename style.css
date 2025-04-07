@@ -1,0 +1,339 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none; /*madde işareti olmasın*/
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+    box-sizing:border-box;
+}
+#container{
+     width: 1200px;
+     height: 1200px; /*normalde auto olacak */
+     background-color: white;
+     margin-left: auto;
+     margin-right: auto;
+}
+
+.header_nav{
+    
+    width: 600px;
+    height: 100px;
+    float: left; /*yemek dunyası ve ana sayfa yazıları solda sırayla*/
+}
+#container header h1{
+    margin-left:  115px;
+    line-height: 100px; /*yazıyı 100px alanda ortalarız*/
+    font-size: 27px;
+    color:rgb(242, 2, 2);
+    text-shadow: 1px 1px 5px;
+    margin:0;
+}
+button span{
+    display: block;
+    width: 40px;
+    border: 3px solid black;
+    border-radius: 3px; /*yuvalramak için*/
+    margin: 8px;
+}
+button{
+    background-color:rgb(242, 240, 240);
+    border: none;
+    display: none;
+}
+nav ul{
+    display: flex; /*menunun yan yana dizilmesini saglar*/
+   justify-content: space-around; /*menu boşuluğu eşit dağıtır.*/
+   /* justify-items: center; */
+   align-items: center; 
+   height: 100px;
+}
+nav ul li a {
+    color: black; /* Menü rengini siyah yapar */
+    font-weight: bold; /* Yazıyı kalın yapar */
+    text-decoration: none; /* Alt çizgiyi kaldırır */
+    font-size: 18px; /* Yazı boyutunu büyütür */
+    padding: 10px 20px; /* Tıklama alanını genişletir */
+    transition: color 0.3s ease; /* Renk değişimini yumuşatır */
+}
+
+nav ul li a:hover {
+    color: #f71500; /* Üzerine gelince rengi değiştirir */
+}
+
+main{
+    clear: both;
+}
+#slider{
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+#serit{
+    width: 300%;
+    position: absolute;
+    left: 0px;
+    top:0px;
+    transition: left 1s;
+}
+#serit div{
+    width: 33.33%;
+    float: left;
+    background-image:url(../images/slayt.jpg);
+    background-size: 100% 400px;
+    height: 400px;
+}
+#serit h2{
+    width: 40%;
+    font-size: 32px;
+    color: white;
+    margin-top: 20px;
+    margin-left: 40px;
+
+}
+#serit a{
+    display: block;
+    width: 130px;
+    /* height: 60px; */
+    border: 2px solid white;
+    border-radius: 30px;
+    text-align: center;
+    line-height: 60px;
+    color: white;
+    font-size: 24px;
+    background-color: rgba(255, 255, 255, 0.633);
+    margin-left: 40px;
+    margin-top: 50px;
+}
+#ileri,#geri{
+width: 30px;
+height: 400px;
+background-color: rgba(255, 255, 255, 0.3);
+position: absolute;
+cursor: pointer;
+}
+#geri{
+    left:0px;
+    top:0px;
+}
+#ileri{
+    right: 0px;
+    top:0px;
+}
+#ileri span,#geri span{
+    color:white;
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+    line-height: 400px;
+    display:block;
+}
+#cards{
+    height: 370px;
+    padding: 50px 115px;
+    display: flex;
+    justify-content: space-between;
+}
+#cards #sol,#cards #sag{
+    width: 470px;
+    height: 270px;
+}
+#cards #sag{
+    background-image: url(../images/kabak-tatlisi.jpg);
+    background-size: 470px 270px;
+    border-radius: 10px;
+   
+}
+#cards #sol{
+   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+#sol div{
+    width: 220px;
+    height: 120px;
+    background-size: 220px 120px;
+    border-radius: 10px;
+}
+#sol div:first-child{
+    background-image: url(../images/mucver-tarifi.jpg);
+}
+#sol div:nth-child(2){
+    background-image: url(../images/tiramisu.jpg);
+    }
+#sol div:nth-child(3){
+        background-image: url(../images/patates-puresi.jpg);
+}
+#sol div:last-child{
+background-image: url(../images/mercimek-koftesi.jpg);
+}
+@media only screen and (max-width:992px){
+#container{
+    width: 100%;
+}
+.header_nav{
+    height: 60px;
+}
+header{
+    width: 85%!important;
+}
+nav{
+    width: 15%!important;
+    padding-right: 10px;
+   
+}
+header h1{
+    margin-left: 10px;
+    line-height: 60px;
+}
+button{
+    display: block;
+    /* margin-right: 10px; */
+}
+nav ul{
+    display: none;
+    position: absolute;
+    top:60px;
+    right: 0px;
+    width: 50%;
+    height: 100vh;
+    background-color: rgba(224, 95, 95, 0.8);
+    z-index: 100;
+}
+nav ul a{
+    display: block;
+    line-height: 60px;
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    transition: all 1s;
+}
+nav ul a:hover{
+  text-shadow: 2px 2px 3px;
+}
+#cards{
+   flex-direction: column-reverse;
+   height: 640px;
+}
+#sol{
+    margin-top: 30px;
+}
+}
+/* @media only screen and (min-width:992px){
+    nav ul{
+        display: flex!important;
+    }
+} */
+ /* Küçük yiyecek kartlarına yazı ekleme */
+#sol div{
+    position: relative;
+    overflow: hidden;
+
+}
+
+#sol div::after{
+    content: attr(data-text);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    height: 30px;
+    font-weight: bold;
+    font-size: 18px;
+}
+#sag {
+    position: relative;
+    overflow: hidden;
+    height: 270px;
+    width: 470px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff; /* Yazı rengi */
+    font-size: 20px;
+    background-image: url('images/photo.jpg'); /* Fotoğraf yolu */
+    background-size: cover;
+    background-position: center;
+    align-items: flex-end; 
+}
+
+#sag::before {
+    content: attr(data-text); /* data-text içeriğini getirme */
+    position: absolute;
+    z-index: 1; /* Yazıyı üst katmana taşıma */
+    font-weight: bold;
+}
+#sag::after {
+    content: '';
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)); 
+    /* z-index: 0; Gradyanı arka plana al */
+}
+.footer-yukari {
+    background-color: #7a2c2c;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    height: 200px;
+    margin:0;
+    font-style: italic;
+}
+
+.footer-yukari p {
+    margin: 0;
+    font-size: 18px;
+}
+
+.footer-yukari strong {
+    font-weight:normal;
+
+}
+
+.footer-asagi {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    height: 130px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-asagi p {
+    margin: 0px;
+    font-size: 13px;
+    text-align: right;
+}
+
+.footer-asagi ul li a {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 1px;
+    text-align: center;
+    width:40%;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+}
+.footer-asagi a:hover {
+    color: #FFD700; /* Üzerine gelindiğinde altın sarısı */
+  }
+  
+
+.footer-asagi h1 {
+text-align:right;
+
+}
