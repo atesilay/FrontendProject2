@@ -1,5 +1,7 @@
 #FrontendProject2
+
 🍽️ YEMEK DÜNYASI - Tarif ve Lezzet Platformu
+
 Bu proje, HTML, CSS ve JavaScript kullanılarak geliştirilmiş bir yemek tarifi sitesidir. Kullanıcı dostu arayüzü ve görsel zenginliğiyle dikkat çeken bu site, yemek severlere birbirinden lezzetli tariflere kolayca ulaşma imkanı sunar.
 
 📌 Özellikler
