@@ -24,8 +24,12 @@ JavaScript (Temel düzeyde)
 
 Responsive Web Design (Mobil uyumluluk)
 
-![Ekran görüntüsü 2025-04-07 153523](https://github.com/user-attachments/assets/f3983167-86ff-45bf-9fff-58f18d95f990)
+
 
 
 ![Ekran görüntüsü 2025-04-07 153451](https://github.com/user-attachments/assets/ed1f706d-a214-4d73-a38b-d0c66cd998c2)
+
+
+![Ekran görüntüsü 2025-04-07 153523](https://github.com/user-attachments/assets/f3983167-86ff-45bf-9fff-58f18d95f990)
+
 
